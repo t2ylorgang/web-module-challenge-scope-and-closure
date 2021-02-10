@@ -28,9 +28,9 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  Counter 1 is a function being used inside of a function and does not feature a closure since there is no variable being used within the function scope that is being retrieved from the global scope. 
   2. Which of the two uses a closure? How can you tell?
-  
+  Counter 2 code uses a closure because this function is returning the variable "count"; which is declared in the global scope and retrieved outside of the function scope for use within Counter 2.
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
 */
