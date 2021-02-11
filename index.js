@@ -62,9 +62,13 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
-}
+function randoNum(num) {
+  return Math.floor(Math.random() * Math.floor(num));
+};
+
+function inning(cb) {
+  return randoNum(3);
+};
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
