@@ -176,12 +176,13 @@ let scoreArr = [];
 function scoreboard(getInningScore, inning, numOfIng) {
   let homeScoreBoard = 0;
   let awayScoreBoard = 0;
+  let whatInning = 0;
 
   for (let i = 0; i <= numOfIng; i++) {
-    let score = getInningScore(inning);
-    scoreArr.push(`Inning ${i}: Away ${score.awayScoreForInning} - Home ${score.homeScoreForInning}`);
-    home += score.homeScoreForInning;
-    away += score.awayScoreForInning;
+    whatInning += 1;
+    homeScoreBoard += getInningScore(inning);
+    awayScoreBoard += getInningScore(inning);
+    scoreArr.push(`Inning ${i+1}: Away ${awayScoreBoard} - Home ${homeScoreBoard}`);
   }
 
   if (homeScoreBoard === awayScoreBoard) {
