@@ -85,41 +85,43 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-const homeScore = () => {
+const homeScoreCounter = () => {
   let hCount = 0;
   return function() {
-    hCount = hCount + 1;
+    hCount = hCount + inning();
     return hCount;
   }
 };
 
-const newHomeScore = homeScore();
+const newHomeScore = homeScoreCounter();
 
-const awayScore = () => {
+const awayScoreCounter = () => {
   let aCount = 0;
   return function() {
-    aCount = aCount + 1;
+    aCount = aCount + inning();
     return aCount;
   }
 };
 
-const newAwayScore = awayScore();
+const newAwayScore = awayScoreCounter();
 
 let homeScore = 0;
 let awayScore = 0;
 
 function finalScore(inning, numOfIng) {
-  for (let i = 0; 1 < numOfIng; i++) {
-    
+  for (let i = 0; i < numOfIng; i++) {
+    let homeScore = (homeScore + homeScoreCounter());
+    let awayScore = (awayScore + awayScoreCounter());
   }
-}
+  return {"Home": homeScore, "Away": awayScore}
+};
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
+function getInningScore() {
   /*Your Code Here */
 }
 
