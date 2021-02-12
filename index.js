@@ -93,8 +93,6 @@ const homeScoreCounter = () => {
   }
 };
 
-const newHomeScore = homeScoreCounter();
-
 const awayScoreCounter = () => {
   let aCount = 0;
   return function() {
@@ -103,7 +101,6 @@ const awayScoreCounter = () => {
   }
 };
 
-const newAwayScore = awayScoreCounter();
 
 let homeScore = 0;
 let awayScore = 0;
@@ -121,9 +118,15 @@ Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore() {
-  /*Your Code Here */
-}
+function getInningScore(inning) {
+  let homeScoreForInning = 0;
+  let awayScoreForInning = 0;
+
+  homeScoreForInning + inning();
+  awayScoreForInning + inning();
+
+  return {"Away": awayScoreForInning, "Home": homeScoreForInning}
+};
 
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
