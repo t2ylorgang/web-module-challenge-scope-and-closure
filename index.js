@@ -66,7 +66,7 @@ function randoNum(num) {
   return Math.floor(Math.random() * Math.floor(num));
 };
 
-function inning(cb) {
+function inning() {
   return randoNum(3);
 };
 
@@ -85,8 +85,33 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+const homeScore = () => {
+  let hCount = 0;
+  return function() {
+    hCount = hCount + 1;
+    return hCount;
+  }
+};
+
+const newHomeScore = homeScore();
+
+const awayScore = () => {
+  let aCount = 0;
+  return function() {
+    aCount = aCount + 1;
+    return aCount;
+  }
+};
+
+const newAwayScore = awayScore();
+
+let homeScore = 0;
+let awayScore = 0;
+
+function finalScore(inning, numOfIng) {
+  for (let i = 0; 1 < numOfIng; i++) {
+    
+  }
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
