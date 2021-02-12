@@ -1,3 +1,5 @@
+Taylor Olson
+
 # Scope and Closure Challenge
 
 The module challenge is the afternoon project or assignment that students work through independently. This expands on the guided project completed earlier with the instructor.
@@ -43,6 +45,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Closure is a function and its lexical environment. In other words, in javascript, closure occurs when a function goes outside of its own scope (function scope) to use a variable from the outside world or the global scope. Functions can reach outside of their own scope but you cannot reach into a function scope and use its own private variables.
+
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,9 +69,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+The inner anonymous function is using the Math.random function and Math.floor as well as the name parameter that is being grabbed from the outer function.
 
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The name is always the number for the roll can change.
+
+c. What is the lexical scope of `newRoll`? 
+newRoll is private to the anonymous function within personalDice()
 
 ### Task 3 - Stretch Goals
 
